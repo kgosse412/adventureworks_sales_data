@@ -3,7 +3,10 @@
 ## Overview
 This is a report built following [Ali Ahmad's Data Analyst Porfolio Project](https://www.youtube.com/playlist?list=PLMfXakCUhXsEUtk8c0zWr4whamGxLhAu0).
 
-Although I followed the series to build the report, I added my own extra touches to the report such as using a DAX built calendar (to showcase my DAX skills), and adding two drillthrough dashboards for Customers and Products.
+Although I followed the series to build the report, I added my own extra touches to the report:
+- Due to not having access to the Dynamic KPI Card visual, I used the regular KPI visual instead. 
+- I built my own calendar in DAX (to showcase my DAX skills).
+- I added two drillthrough dashboards for customers and products called Customer Drillthru and Product Drillthru.
 
 ## Task
 Analyze Internet Sales from the AdventureWorks sample database using a provided (fake) budget.
