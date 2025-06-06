@@ -1,4 +1,7 @@
-/* 
+/*
+ * Description: Internet sales data, including date keys and order numbers from the internet sales table called FactInternetSales.
+ *
+ * Overview of Cleanup: 
  * Clean up what is needed in the table by excluding columns not needed by using --.
  * Then renamed kept columns using AS command.
 */

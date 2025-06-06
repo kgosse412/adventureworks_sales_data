@@ -1,4 +1,7 @@
 /* 
+ * Description: Product data, including name, category, color, etc., from the product dimension table called DimProduct.
+ *
+ * Overview of Cleanup: 
  * Clean up what is needed in the table by excluding columns not needed by using --.
  * Then rename kept columns using AS command.
  * Added ISNULL to replace NULL status values with Outdated.

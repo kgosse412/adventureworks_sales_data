@@ -1,4 +1,7 @@
 /* 
+ * Description: Customer data, including customer name, email, and city, from the customer dimension table called DimCustomer.
+ *
+ * Overview of Cleanup:
  * Clean up what is needed in the table by excluding columns not needed by using --.
  * Then renamed kept columns using AS command.
  * Added CASE to clarify Male and Female genders.
@@ -36,7 +39,7 @@ END AS Gender
 --,[NumberCarsOwned]
 --,[AddressLine1]
 --,[AddressLine2]
---,c.[Phone]
+--,[Phone]
 ,c.[DateFirstPurchase] AS "Date First Purchase"
 --,[CommuteDistance]
 ,g.[City] AS "City" -- pulled from DimGeography table
