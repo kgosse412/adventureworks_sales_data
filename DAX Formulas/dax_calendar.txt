@@ -1,0 +1,41 @@
+Calendar = 
+    // Create a calendar table variable starting from 01/01/2019 until today's current date
+    // https://dax.guide/calendar/
+    VAR _calendar = CALENDAR(DATE(2023,01,01), TODAY())
+RETURN
+    // Create a single table from two different tables
+    // https://dax.guide/generate/
+    GENERATE(
+        _calendar, // Table 1
+        // Variable expressions that will be used to create Table 2
+        VAR year = YEAR([Date])
+        VAR monthNum = MONTH([Date])
+        VAR dayNum = DAY([Date])
+        VAR dateKey = CONCATENATE(CONCATENATE(year, IF(monthNum < 10, CONCATENATE("0", monthNum), monthNum)), IF(dayNum < 10, CONCATENATE("0", dayNum), dayNum))
+        VAR qtrNum = ROUNDUP(monthNum / 3, 0)
+        VAR qtrYr = CONCATENATE(CONCATENATE(year, " Q"), qtrNum)
+        VAR qtrSort = CONCATENATE(CONCATENATE(year, "."), qtrNum)
+        VAR monthName = FORMAT([Date], "MMM")
+        VAR monthYr = CONCATENATE(CONCATENATE(year, " "), monthName)
+        VAR monthSort = CONCATENATE(CONCATENATE(year, "."), IF(monthNum < 10, CONCATENATE("0", monthNum), monthNum))
+        VAR wwNum = IF(WEEKNUM([Date]) = 53, 1, WEEKNUM([Date]))
+        VAR wwYr = CONCATENATE(CONCATENATE(year, " "), IF(wwNum < 10, CONCATENATE("0", wwNum), wwNum))
+        VAR wwSort = CONCATENATE(CONCATENATE(year, "."), IF(wwNum < 10, CONCATENATE("0", wwNum), wwNum))
+        RETURN
+            // The columns to return with each row's criteria (based off variables above)
+            // https://dax.guide/row/
+            ROW(
+                "Date Key", dateKey,
+                "Year", year,
+                "Quarter Num", qtrNum,                
+                "Quarter + Year", qtrYr,
+                "Quarter Sort", qtrSort,
+                "Month Num", monthNum,
+                "Month", monthName,
+                "Month + Year", monthYr,
+                "Month Sort", monthSort,
+                "WW Num", wwNum,
+                "WW + Year", wwYr,
+                "WW Sort", wwSort
+            )
+    )
