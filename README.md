@@ -5,7 +5,7 @@ This is a report built following [Ali Ahmad's Data Analyst Porfolio Project](htt
 
 Although I followed the series to build the report, I added my own extra touches to the report:
 - Due to not having access to the Dynamic KPI Card visual, I used the regular KPI visual instead. 
-- I built my own calendar in DAX (to showcase my DAX skills).
+- I built my own [calendar in DAX](https://github.com/kgosse412/adventureworks_sales_data/blob/main/DAX%20Formulas/dax_calendar.txt) (to showcase my DAX skills).
 - I added two drillthrough dashboards for customers and products called Customer Drillthru and Product Drillthru.
 
 ## Task
