@@ -35,4 +35,8 @@ Sales Overview Tab (w/o Month slicer selected)
 ![Sales Overview Tab](Images/sales_overview_tab.png)
 
 Sales Overview Tab (w/ Month slicer selected)
-![Sales Over Tab w/ Month Slicer Selected](Images/sales_overview_tab_month_slicer_selected.png)
+![Sales Overview Tab w/ Month Slicer Selected](Images/sales_overview_tab_month_slicer_selected.png)
+
+Drillthrough Functionality
+![Sales Overview Tab w/ Drillthrough](Images/sales_overview_tab_drillthrough.png)
+![Product Drillthrough Tab](Images/product_drillthrough_clothes.png)
