@@ -23,4 +23,5 @@ All SQL files can be found under the [SQL Queries](https://github.com/kgosse412/
 
 ## Tools Used
 - SQL Server 2022
-- SQL Server 
+- SQL Server Management Studio 21.1.3
+- Power BI (April 2025)
